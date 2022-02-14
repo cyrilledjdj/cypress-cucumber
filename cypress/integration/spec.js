@@ -1,9 +1,19 @@
 /// <reference types="cypress" />
 
-it('works', () => {
-  cy.intercept('https://jsonplaceholder.cypress.io/users', {
-    fixture: 'users.json'
-  }).as('users')
-  cy.visit('/')
-  cy.wait('@users', {timeout: 1800000})
-})
+describe('The Home Page', () => {
+  // before once, access stackblitz
+  before(() => {
+    cy.visit('/');
+    cy.wait(6000);
+    cy.get('button').click();
+    cy.wait(5000);
+  });
+
+  beforeEach(() => {
+    // 
+  });
+
+  it('Has the expected title', () => {
+    cy.title().should('equal', 'Oliver Sacks Book Collection');
+  });
+});

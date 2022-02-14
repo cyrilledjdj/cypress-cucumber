@@ -1,5 +1,10 @@
 {
   "supportFile": false,
   "pluginsFile": false,
-  "baseUrl": "https://stackblitz.com/edit/nextjs-khpmh3"
+  "baseUrl": "https://angular-wmzvh4.stackblitz.io/",
+  "pageLoadTimeout": 30000,
+  "taskTimeout": 30000,
+  "execTimeout": 30000,
+  "requestTimeout": 30000,
+  "defaultCommandTimeout": 30000
 }
