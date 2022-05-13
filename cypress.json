@@ -4,7 +4,6 @@
   "testFiles": ["**/*.{feature,features,spec.js}"],
   "retries": 1,
   "reporterOptions": {
-    "reportDir": "reports/results",
     "overwrite": false,
     "html": false,
     "json": true

@@ -1,2 +1,4 @@
 node_modules/
 reports
+mochawesome-report
+cypress-combined-report.json
