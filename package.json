@@ -7,10 +7,10 @@
     "cypress": "cypress",
     "test": "cypress run --browser chrome",
     "test.headed": "cypress run --browser chrome --headed",
-    "delete:reportFolder": "rm -rf mochawesome-report/ reports/",
+    "delete:reportFolder": "rm -rf reports/ cypress-combined-report.json",
     "test:cli": "npm run delete:reportFolder && cypress run && npm run create:html:report",
-    "merge:reports": "mochawesome-merge mochawesome-report/*.json > cypress-combined-report.json",
-    "create:html:report": "npm run merge:reports && marge --reportDir reports/tests cypress-combined-report.json"
+    "merge:reports": "mochawesome-merge reports/mocha/*.json > cypress-combined-report.json",
+    "create:html:report": "npm run merge:reports && marge --reportDir reports/mochareports cypress-combined-report.json"
   },
   "keywords": [],
   "author": "Cyrille",
