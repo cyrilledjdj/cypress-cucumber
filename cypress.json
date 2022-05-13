@@ -5,8 +5,8 @@
   "retries": 1,
   "reporterOptions": {
     "overwrite": false,
-    "html": true,
-    "json": false
+    "html": false,
+    "json": true
   },
   "pageLoadTimeout": 30000,
   "taskTimeout": 30000,
