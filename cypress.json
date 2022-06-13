@@ -1,5 +1,5 @@
 {
-  "baseUrl": "https://fullstack-castronauts.herokuapp.com/ng",
+  "baseUrl": "https://fullstack-castronauts.herokuapp.com/",
   "reporter": "../node_modules/mochawesome/src/mochawesome.js",
   "testFiles": ["**/*.{feature,features,spec.js}"],
   "retries": 1,
