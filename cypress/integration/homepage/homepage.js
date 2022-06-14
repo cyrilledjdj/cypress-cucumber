@@ -5,7 +5,7 @@ Given('User is getting to the homepage', () => {
 });
 
 Then('User should see a list of tracks', () => {
-  cy.get('ng-lift-off-tracks').should('be.visible');
+  cy.get('a h3').should('contain.text', 'Catstronauts');
 });
 
 And('page should have a title of Catstronauts', () => {
