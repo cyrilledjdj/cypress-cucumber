@@ -11,6 +11,6 @@ describe('The Home Page', () => {
   });
 
   it('Has visible tracks', () => {
-    cy.get('ng-lift-off-tracks').should('be.visible');
+    cy.get('a h3').should('contain.text', 'Catstronauts');
   });
 });
