@@ -15,4 +15,12 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands';
-require('cypress-grep')()
+
+import addContext from 'mochawesome/addContext';
+
+Cypress.on('test:after:run', (test, runnable) => {
+  if (test.state === 'failed') {
+    const screenshot = `../screenshots/${Cypress.spec.name}/${runnable.parent.title} -- ${test.title} (failed).png`;
+    addContext({ test }, screenshot);
+  }
+});

@@ -12,8 +12,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       on('task', { downloadFile }); //Cypress file Download
       on('file:preprocessor', cucumber()); //For cypress cucumber preprocessor
-      require('cypress-grep/src/plugin')(config);
-      return config; //For cypress-grep to add tags to test
+      return config;
     },
   },
   reporter: '../node_modules/mochawesome/src/mochawesome.js',
