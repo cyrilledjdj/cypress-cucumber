@@ -8,7 +8,7 @@ const cucumber = require('cypress-cucumber-preprocessor').default;
 module.exports = defineConfig({
   e2e: {
     baseUrl: 'https://fullstack-castronauts.herokuapp.com/',
-    specPattern: ['**/*.{feature,features,spec.js}'],
+    specPattern: ['**/*.{feature,features,cy.js}'],
     setupNodeEvents(on, config) {
       on('task', { downloadFile }); //Cypress file Download
       on('file:preprocessor', cucumber()); //For cypress cucumber preprocessor
