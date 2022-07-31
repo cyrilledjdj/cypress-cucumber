@@ -16,7 +16,7 @@
   "author": "Cyrille",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^10.1.0",
+    "cypress": "^10.3.1",
     "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-downloadfile": "^1.2.2",
     "cypress-recurse": "^1.20.0",
