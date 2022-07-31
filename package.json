@@ -16,12 +16,9 @@
   "author": "Cyrille",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^9.6.1",
+    "cypress": "^10.1.0",
     "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-downloadfile": "^1.2.2",
-    "cypress-file-upload": "^5.0.8",
-    "cypress-grep": "^2.13.1",
-    "cypress-real-events": "^1.7.0",
     "cypress-recurse": "^1.20.0",
     "mocha": "^10.0.0",
     "mochawesome": "^7.1.3",
