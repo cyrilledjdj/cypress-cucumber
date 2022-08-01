@@ -1,17 +1,24 @@
-const { defineConfig } = require('cypress');
+import { defineConfig } from 'cypress';
+
 //For Cypress file Download
 const { downloadFile } = require('cypress-downloadfile/lib/addPlugin');
+const browserify = require('@cypress/browserify-preprocessor');
 
 //For cucumber integration
 const cucumber = require('cypress-cucumber-preprocessor').default;
+const resolve = require('resolve');
 
-module.exports = defineConfig({
+export default defineConfig({
   e2e: {
     baseUrl: 'https://fullstack-castronauts.herokuapp.com/',
-    specPattern: ['**/*.{feature,features,cy.js}'],
+    specPattern: ['**/*.{feature,features,cy.js,cy.ts}'],
     setupNodeEvents(on, config) {
+      const options = {
+        ...browserify.defaultOptions,
+        typescript: resolve.sync('typescript', { baseDir: config.projectRoot }),
+      };
       on('task', { downloadFile }); //Cypress file Download
-      on('file:preprocessor', cucumber()); //For cypress cucumber preprocessor
+      on('file:preprocessor', cucumber(options)); //For cypress cucumber preprocessor
       return config;
     },
   },
