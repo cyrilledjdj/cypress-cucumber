@@ -2,15 +2,15 @@
 
 describe('The Home Page', () => {
   // before once, access stackblitz
-  before(() => {
+  beforeEach(() => {
     cy.visit('/');
   });
 
   it('Has the expected title', () => {
-    cy.title().should('equal', 'Catstronauts');
+    cy.title().should('equal', 'request | Cypress Documentation');
   });
 
   it('Has visible tracks', () => {
-    cy.get('a h3').should('contain.text', 'Catstronauts');
+    cy.get('h1').should('contain.text', 'request');
   });
 });

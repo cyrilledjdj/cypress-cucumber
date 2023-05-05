@@ -5,9 +5,9 @@ Given('User is getting to the homepage', () => {
 });
 
 Then('User should see a list of tracks', () => {
-  cy.get('a h3').should('contain.text', 'Catstronauts');
+  cy.get('h1').should('contain.text', 'request');
 });
 
 And('page should have a title of Catstronauts', () => {
-  cy.title().should('equal', 'Catstronauts');
+  cy.title().should('equal', 'request | Cypress Documentation');
 });

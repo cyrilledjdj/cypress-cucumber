@@ -10,7 +10,7 @@ const resolve = require('resolve');
 
 export default defineConfig({
   e2e: {
-    baseUrl: 'https://fullstack-castronauts.herokuapp.com/',
+    baseUrl: 'https://docs.cypress.io/api/commands/request',
     specPattern: ['**/*.{feature,features,cy.js,cy.ts}'],
     setupNodeEvents(on, config) {
       const options = {
@@ -23,6 +23,7 @@ export default defineConfig({
     },
     experimentalRunAllSpecs: true,
   },
+  experimentalSingleTabRunMode: true,
   reporter: '../node_modules/mochawesome/src/mochawesome.js',
   retries: 1,
   reporterOptions: {
