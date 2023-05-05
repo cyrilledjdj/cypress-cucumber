@@ -21,6 +21,7 @@ export default defineConfig({
       on('file:preprocessor', cucumber(options)); //For cypress cucumber preprocessor
       return config;
     },
+    experimentalRunAllSpecs: true,
   },
   reporter: '../node_modules/mochawesome/src/mochawesome.js',
   retries: 1,
@@ -38,4 +39,5 @@ export default defineConfig({
   defaultCommandTimeout: 30000,
   screenshotsFolder: 'reports/screenshots',
   videosFolder: 'reports/videos',
+  experimentalStudio: true,
 });

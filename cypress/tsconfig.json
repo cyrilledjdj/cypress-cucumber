@@ -4,7 +4,8 @@
     "lib": ["es5", "dom"],
     "types": ["cypress", "node"],
     "strict": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true
   },
   "include": ["**/*.ts", "integration/homepage/homepage.ts", "integration/homepage.cy.ts"]
 }
